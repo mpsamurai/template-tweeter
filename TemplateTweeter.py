@@ -13,6 +13,9 @@ class TemplateTweeter():
     # jinja object
     __jinja = None
 
+    # twitter投稿文字制限数
+    __twitter_str_max = 140
+
     def __init__(
         self,
         twitter_options,
@@ -49,3 +52,13 @@ class TemplateTweeter():
         tpl = self.__jinja.get_template(template_path)
         msg = tpl.render(data_dict)
         self.__tweepy.update_status(msg.encode('utf-8'))
+
+    def checkStringLen(self, val):
+        """
+        ツイート文字数チェック
+        :param val:
+        :return: false:140字よりも多い / true:140字以下
+        """
+        if self.__twitter_str_max < len(u""+val):
+            return false
+        return true
