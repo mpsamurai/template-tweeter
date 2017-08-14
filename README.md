@@ -19,8 +19,7 @@ This is a wrapper module that tweets using tweepy and Jinja2.
     - Access Token Secret
 
 2. Add Twitter information to the setting file.
-template-tweeter/template_tweeter/configure.py
-
+```python:template-tweeter/template_tweeter/configure.py
     twitter_options = {
         # API key
         "consumer_key": "Consumer Key (API Key)",
@@ -36,9 +35,10 @@ template-tweeter/template_tweeter/configure.py
         # Suffix for posting data shortening twitter
         "shorten_suffix": "…"
     }
+```
 
 3. run
-
+```python
     from template_tweeter import configure
     from template_tweeter import TemplateTweeter as template_tweeter
 
@@ -48,7 +48,7 @@ template-tweeter/template_tweeter/configure.py
         "url": "http://google.com",
         "hash_tag": "#test"
     })
-
+```
 
 ## Install
 
