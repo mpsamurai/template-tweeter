@@ -31,7 +31,7 @@ twitter_options = {
     #   True: insert / False: not insert
     "separator_flg": True,
     # Suffix for posting data shortening twitter
-    "shorten_suffix": "…"
+    "shorten_suffix": "..."
 }
 
 """
