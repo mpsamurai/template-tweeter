@@ -67,8 +67,6 @@ class TemplateTweeter():
             else:
                 self.__log_dir = os.path.dirname(os.path.abspath(__file__)) + "/log"
 
-            self._log('test')
-
             # OAuth Authentication
             auth = tweepy.OAuthHandler(twitter_options['consumer_key'], twitter_options['consumer_secret'])
             auth.set_access_token(twitter_options['access_token'], twitter_options['access_token_secret'])
