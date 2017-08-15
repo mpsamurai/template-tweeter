@@ -3,7 +3,7 @@ template-tweeter
 This is a wrapper module that posts to twitter using <a href="http://tweepy.readthedocs.io/en/v3.5.0/index.html" target="_blank">tweepy</a> and <a href="http://jinja.pocoo.org/docs/dev/" target="_blank">Jinja2</a>.  
 When using a template engine like jinja 2, it is convenient when you want to assign a different value for each post to a template, and post it as follows.  
   
-**<span name="anker1">template (post.html)</span>**
+**<span id="anker1">template (post.html)</span>**
 ```html:post.html
 Hello, Today we will hold an event {{ event_name }}.
 Summary: {{ summary }}
@@ -74,7 +74,7 @@ edit settings file(/configure.py).
 |jinja_options.assign_item_list [*2](#anker3) |list |List of items to assign to the template |default: [] |
 |jinja_options.exclusion_shorten_item_list [*3](#anker4) |list |If the post data can not fit within 140 characters, a list of assignment items that will not be abbreviated |default: [] |
 
-<span name="anker2">*1</span>  
+<span id="anker2">*1</span>  
 If you specify `jinja_options.template_use = True`, you will get an error unless you specify a path with `jinja_options.template_dir`.  
 If you specify `jinja_options.template_use = False`, in the first argument of `TemplateTweeter::post()`, it is necessary to specify an assign character string.
 ```python
@@ -85,12 +85,12 @@ result = tt.post('Hello, Today we will hold an event {{ event_name }}.Summary: {
     "hash_tag": "#eventAAA"
 })
 ```
-<span name="anker3">*2</span>  
+<span id="anker3">*2</span>  
 It is necessary to enumerate all the item names to be assigned to the template.  
 ```
     "assign_item_list": ['event_name', 'summary', 'url', 'hash_tag'],
 ```
-<span name="anker4">*3</span>  
+<span id="anker4">*3</span>  
 It is necessary to enumerate all excluded items from the abbreviated targets. For example, URL and hash tags that make sense if shortened.  
 ```
     "exclusion_shorten_item_list": ['url', 'hash_tag'],
