@@ -9,7 +9,7 @@ from jinja2 import Template, Environment, FileSystemLoader
 
 class TemplateTweeter():
     """
-    Rapper module of tweepy and Jinja2
+    Wrapper module of tweepy and Jinja2
         tweepy: http://tweepy.readthedocs.io/en/v3.5.0/index.html
         Jinja2: http://jinja.pocoo.org/docs/dev/
     """
