@@ -3,7 +3,7 @@ template-tweeter
 This is a wrapper module that posts to twitter using <a href="http://tweepy.readthedocs.io/en/v3.5.0/index.html" target="_blank">tweepy</a> and <a href="http://jinja.pocoo.org/docs/dev/" target="_blank">Jinja2</a>.  
 When using a template engine like jinja 2, it is convenient when you want to assign a different value for each post to a template, and post it as follows.  
   
-**<span id="anker1">template (post.html)</span>**
+**<a name="anker1">template file**
 ```html:post.html
 Hello, Today we will hold an event {{ event_name }}.
 Summary: {{ summary }}
