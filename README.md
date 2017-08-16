@@ -69,10 +69,10 @@ edit settings file(/configure.py).
 |options.log_dir |string |Output log directory absolute path |default: /log |
 |twitter_options.separator_flg |bool |Whether to insert a space between data items when posting |True: insert / False: not insert |
 |twitter_options.shorten_suffix |string |Ellipsis when the contribution content exceeds 140 characters |default: '...' |
-|jinja_options.template_use [*1](#anker2) |bool |Flag to assign value using template file |True: use template file in 'template_dir' / False: use only template data |
-|jinja_options.template_dir [*1](#anker2) |string |templates directory absolute path |default: "" |
-|jinja_options.assign_item_list [*2](#anker3) |list |List of items to assign to the template |default: [] |
-|jinja_options.exclusion_shorten_item_list [*3](#anker4) |list |If the post data can not fit within 140 characters, a list of assignment items that will not be abbreviated |default: [] |
+|jinja_options.template_use [\*1](#anker2) |bool |Flag to assign value using template file |True: use template file in 'template_dir' / False: use only template data |
+|jinja_options.template_dir [\*1](#anker2) |string |templates directory absolute path |default: "" |
+|jinja_options.assign_item_list [\*2](#anker3) |list |List of items to assign to the template |default: [] |
+|jinja_options.exclusion_shorten_item_list [\*3](#anker4) |list |If the post data can not fit within 140 characters, a list of assignment items that will not be abbreviated |default: [] |
 
 <span id="anker2">*1</span>  
 If you specify `jinja_options.template_use = True`, you will get an error unless you specify a path with `jinja_options.template_dir`.  
